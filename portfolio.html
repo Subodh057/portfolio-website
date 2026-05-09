@@ -1,254 +1,500 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Content Creator</title>
+  <title>Projects | Subodh Awasthi</title>
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <!-- fonts awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #07111f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      width: 100%;
+      background: #0b1628;
+      border-bottom: 1px solid rgba(0, 255, 170, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffaa;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #d9e6f2;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #00ffaa;
+    }
+
+    .page-hero {
+      padding: 90px 20px 60px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(7, 17, 31, 0.94), rgba(7, 17, 31, 0.98)),
+        url("images/cyber-bg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .page-hero span {
+      display: inline-block;
+      padding: 8px 14px;
+      background: rgba(0, 255, 170, 0.1);
+      border: 1px solid rgba(0, 255, 170, 0.4);
+      color: #00ffaa;
+      border-radius: 30px;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .page-hero h1 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    .page-hero p {
+      color: #b7c7d6;
+      max-width: 750px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .featured-project {
+      background: #0b1628;
+      border: 1px solid rgba(0, 255, 170, 0.35);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 45px;
+      box-shadow: 0 0 35px rgba(0, 255, 170, 0.08);
+    }
+
+    .featured-project .label {
+      color: #00ffaa;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .featured-project h2 {
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+
+    .featured-project p {
+      color: #b7c7d6;
+      margin-bottom: 16px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: #0b1628;
+      padding: 26px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0, 255, 170, 0.5);
+      box-shadow: 0 0 25px rgba(0, 255, 170, 0.08);
+    }
+
+    .project-card i {
+      color: #00ffaa;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      color: #ffffff;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .project-card p {
+      color: #b7c7d6;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .project-meta {
+      margin: 12px 0;
+      color: #d9e6f2;
+      font-size: 14px;
+    }
+
+    .project-meta strong {
+      color: #00ffaa;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: 5px 5px 0 0;
+      padding: 5px 9px;
+      background: rgba(0, 255, 170, 0.1);
+      color: #00ffaa;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #00ffaa;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .note-box {
+      margin-top: 45px;
+      padding: 25px;
+      background: rgba(0, 255, 170, 0.08);
+      border: 1px solid rgba(0, 255, 170, 0.25);
+      border-radius: 14px;
+      color: #c7d6e5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      background: #050b14;
+      color: #8fa2b5;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .page-hero h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
 </head>
 
-<body class="sub_page">
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <nav class="navbar navbar-expand-lg custom_nav-container">
-        <div class="custom_menu-btn">
-          <button onclick="openNav()">
-            <span class="s-1"> </span>
-            <span class="s-2"> </span>
-            <span class="s-3"> </span>
-          </button>
-        </div>
-        <div id="myNav" class="overlay">
-          <div class="menu_btn-style ">
-            <button onclick="closeNav()">
-              <span class="s-1"> </span>
-              <span class="s-2"> </span>
-              <span class="s-3"> </span>
-            </button>
-          </div>
-          <div class="overlay-content">
-            <a class="" href="index.html">
-              Home
-            </a>
-            <a class="" href="about.html">
-              About
-            </a>
-            <a class="active" href="portfolio.html">
-              Portfolio
-            </a>
-            <a class="" href="team.html">
-              Team
-            </a>
-          </div>
-        </div>
-        <a class="navbar-brand" href="index.html">
-          <span>
-            Content Creator
-          </span>
-        </a>
-        <a href="tel:+9779868858879" class="call_btn">
-          Call Us Now
-        </a>
-      </nav>
-    </header>
-    <!-- end header section -->
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Subodh<span style="color:#fff;">Awasthi</span></div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <span>Security Projects & SOC Labs</span>
+    <h1>My Cybersecurity Projects</h1>
+    <p>
+      These projects represent my hands-on cybersecurity learning through SOC-style labs,
+      log analysis, threat detection, network monitoring, vulnerability scanning,
+      and incident response workflows.
+    </p>
   </div>
 
-
-  <!-- portfolio section -->
-
-  <section class="portfolio_section layout_padding">
+  <!-- Projects Section -->
+  <section>
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Portfolio
-        </h2>
-      </div>
-      <div class="portfolio_container ">
-        <div class="box-1">
-          <div class="img-box b-1">
-            <img src="images\IMG_2466.JPG" alt="">
-            <div class="btn-box">
-              <a href="https://www.youtube.com/watch?v=rgy6IQvVnEM&t=257s" class="btn-1">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-          <div class="img-box b-2">
-            <img src="images\IMG_2470.JPG" alt="">
-            <div class="btn-box">
-              <a href="https://www.youtube.com/watch?v=-BMpcVe4dGs" class="btn-1">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
+
+      <!-- Featured Project -->
+      <div class="featured-project">
+        <span class="label">Featured Project</span>
+        <h2>AI-Powered Cybersecurity Lab</h2>
+        <p>
+          An AI-powered cybersecurity lab focused on automated threat detection,
+          SOC workflows, and log analysis using tools like Splunk, Wireshark,
+          Snort, OpenVAS, and Python.
+        </p>
+
+        <div class="project-meta">
+          <strong>Focus Area:</strong> Threat Detection, Log Analysis, SOC Automation
         </div>
-        <div class="box-2">
-          <div class="box-2-top">
-            <div class="img-box b-3">
-              <img src="images/p3.jpg" alt="">
-              <div class="btn-box">
-                <a href="" class="btn-1">
-                  <i class="fa fa-share-alt" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="box-3">
-          <div class="img-box b-1">
-            <img src="images\IMG_2475.JPG" alt="">
-            <div class="btn-box">
-              <a href="https://www.youtube.com/watch?v=wUDK045jY0Y&t=442s" class="btn-1">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-          <div class="img-box b-2">
-            <img src="images\IMG_2471.JPG" alt="">
-            <div class="btn-box">
-              <a href="https://www.youtube.com/watch?v=B6eWPRJVQ7A&t=85s" class="btn-1">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <a href="https://www.youtube.com/@Subodh_Awasthi" class="read_btn">
-          See More
+
+        <span class="tag">Python</span>
+        <span class="tag">Splunk</span>
+        <span class="tag">Wireshark</span>
+        <span class="tag">Snort</span>
+        <span class="tag">OpenVAS</span>
+
+        <br />
+
+        <a
+          href="https://github.com/Subodh057/AI-POWERED-CYBERSECURITY_LAB-"
+          class="project-link"
+          target="_blank"
+        >
+          View Project on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
       </div>
-    </div>
-  </section>
-  <!-- end portfolio section -->
 
-  <!-- contact section -->
+      <div class="projects-grid">
 
-  <section class="contact_section ">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-8 map_container">
-          <div class="map">
-            <div id="googleMap"></div>
-          </div>
-        </div>
-        <div class="col-md-4 detail-box detail_box_common">
-          <div>
-            <div class="heading_container">
-              <h2>
-                Get In Touch
-              </h2>
-            </div>
-            <div class="info_contact">
-              <div class="contact_link_box">
-                <a href="https://www.instagram.com/sub0dh_awasthi/">
-                  <i class="fa fa-map-marker" aria-hidden="true"></i>
-                  <span>
-                    Location
-                  </span>
-                </a>
-                <a href="tel:+9779868858879">
-                  <i class="fa fa-phone" aria-hidden="true"></i>
-                  <span>
-                    Call +9779868858879
-                  </span>
-                </a>
-                <a href="maito:subodhawasthi040@gmail.com">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
-                  <span>
-                    subodhawasthi040@gmail.com
-                  </span>
-                </a>
-              </div>
-              <div class="info_social">
-                <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.instagram.com/sub0dh_awasthi/">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end contact section -->
-
-
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xl-6">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>SOC Incident Response Multi-Tool Lab</h3>
           <p>
-            &copy; <span id="displayYear"></span> All Rights Reserved. Design by
-             Subodh Awasthi
+            A SOC-focused lab simulating real attack scenarios using Wireshark,
+            Snort, Splunk, and OpenVAS together as a complete defensive workflow.
           </p>
-        </div>
-        <div class="col-xl-6">
-          <div class="link_box">
-            <a class="" href="index.html">
-              Home
-            </a>
-            <a class="" href="about.html">
-              About
-            </a>
-            <a class="" href="portfolio.html">
-              Portfolio
-            </a>
-            <a class="" href="team.html">
-              Team
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- footer section -->
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+          <div class="project-meta">
+            <strong>Focus:</strong> Incident Response, Attack Simulation, SOC Workflow
+          </div>
+
+          <span class="tag">Wireshark</span>
+          <span class="tag">Snort</span>
+          <span class="tag">Splunk</span>
+          <span class="tag">OpenVAS</span>
+
+          <br />
+
+          <a
+            href="https://github.com/Subodh057/SOC-Incident-Response-Multi-Tool-Lab"
+            class="project-link"
+            target="_blank"
+          >
+            View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Splunk Lab</h3>
+          <p>
+            A hands-on SOC lab using Splunk to analyze security logs, detect
+            suspicious activities, and understand SIEM-based monitoring.
+          </p>
+
+          <div class="project-meta">
+            <strong>Focus:</strong> SIEM, Log Analysis, Threat Monitoring
+          </div>
+
+          <span class="tag">Splunk</span>
+          <span class="tag">SIEM</span>
+          <span class="tag">Log Analysis</span>
+
+          <br />
+
+          <a
+            href="https://github.com/Subodh057/Splunk-lab"
+            class="project-link"
+            target="_blank"
+          >
+            View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <i class="fa-solid fa-bell"></i>
+          <h3>Snort IDS Lab</h3>
+          <p>
+            A Snort IDS lab demonstrating real-time traffic monitoring,
+            alert detection, and intrusion detection techniques.
+          </p>
+
+          <div class="project-meta">
+            <strong>Focus:</strong> Intrusion Detection, Network Monitoring
+          </div>
+
+          <span class="tag">Snort</span>
+          <span class="tag">IDS</span>
+          <span class="tag">Network Security</span>
+
+          <br />
+
+          <a
+            href="https://github.com/Subodh057/Snort-labs"
+            class="project-link"
+            target="_blank"
+          >
+            View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <i class="fa-solid fa-bug-slash"></i>
+          <h3>OpenVAS Vulnerability Scanning Lab</h3>
+          <p>
+            Hands-on OpenVAS labs focused on vulnerability scanning,
+            security analysis, and identifying weaknesses in systems.
+          </p>
+
+          <div class="project-meta">
+            <strong>Focus:</strong> Vulnerability Assessment, Security Analysis
+          </div>
+
+          <span class="tag">OpenVAS</span>
+          <span class="tag">Vulnerability Scanning</span>
+          <span class="tag">Linux</span>
+
+          <br />
+
+          <a
+            href="https://github.com/Subodh057/Openvas-labs"
+            class="project-link"
+            target="_blank"
+          >
+            View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>Wireshark Network Analysis Lab</h3>
+          <p>
+            Hands-on cybersecurity labs using Wireshark to analyze network traffic,
+            detect suspicious behavior, and understand real-world attack patterns.
+          </p>
+
+          <div class="project-meta">
+            <strong>Focus:</strong> Packet Analysis, Network Security
+          </div>
+
+          <span class="tag">Wireshark</span>
+          <span class="tag">Packet Analysis</span>
+          <span class="tag">TCP/IP</span>
+
+          <br />
+
+          <a
+            href="https://github.com/Subodh057/Wireshark-labs"
+            class="project-link"
+            target="_blank"
+          >
+            View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <i class="fa-solid fa-user-shield"></i>
+          <h3>GitHub Security Portfolio</h3>
+          <p>
+            A collection of cybersecurity learning repositories, lab documentation,
+            and practical work showing my progress toward SOC Analyst roles.
+          </p>
+
+          <div class="project-meta">
+            <strong>Focus:</strong> Cybersecurity Learning, Documentation, GitHub Projects
+          </div>
+
+          <span class="tag">GitHub</span>
+          <span class="tag">Documentation</span>
+          <span class="tag">SOC Learning</span>
+
+          <br />
+
+          <a
+            href="https://github.com/Subodh057"
+            class="project-link"
+            target="_blank"
+          >
+            Visit GitHub Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="note-box">
+        <strong>Note:</strong>
+        My projects are focused on practical cybersecurity learning. I use these labs
+        to understand how SOC analysts monitor alerts, analyze logs, inspect network
+        traffic, detect threats, and respond to security incidents.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Subodh Awasthi. SOC Analyst Portfolio.</p>
+  </footer>
 
 </body>
-
 </html>
