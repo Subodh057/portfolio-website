@@ -1,215 +1,551 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Welcome</title>
+  <title>About | Subodh Awasthi</title>
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <!-- fonts awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #07111f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      width: 100%;
+      background: #0b1628;
+      border-bottom: 1px solid rgba(0, 255, 170, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffaa;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #d9e6f2;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #00ffaa;
+    }
+
+    .page-hero {
+      padding: 90px 20px 60px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(7, 17, 31, 0.94), rgba(7, 17, 31, 0.98)),
+        url("images/cyber-bg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .page-hero span {
+      display: inline-block;
+      padding: 8px 14px;
+      background: rgba(0, 255, 170, 0.1);
+      border: 1px solid rgba(0, 255, 170, 0.4);
+      color: #00ffaa;
+      border-radius: 30px;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .page-hero h1 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    .page-hero p {
+      color: #b7c7d6;
+      max-width: 760px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .about-card,
+    .info-card,
+    .goal-card {
+      background: #0b1628;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 30px;
+    }
+
+    .about-card h2,
+    .info-card h2,
+    .goal-card h2 {
+      color: #00ffaa;
+      margin-bottom: 18px;
+      font-size: 26px;
+    }
+
+    .about-card p,
+    .goal-card p {
+      color: #c7d6e5;
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .info-list {
+      list-style: none;
+    }
+
+    .info-list li {
+      color: #c7d6e5;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+
+    .info-list i {
+      color: #00ffaa;
+      margin-right: 10px;
+      width: 20px;
+    }
+
+    .highlight {
+      color: #00ffaa;
+      font-weight: bold;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #9fb1c1;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .timeline-card {
+      background: #0b1628;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 25px;
+      border-radius: 14px;
+      transition: 0.3s;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 255, 170, 0.5);
+      box-shadow: 0 0 25px rgba(0, 255, 170, 0.08);
+    }
+
+    .timeline-card i {
+      color: #00ffaa;
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .timeline-card h3 {
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .timeline-card p {
+      color: #b7c7d6;
+      font-size: 15px;
+    }
+
+    .tools-box {
+      background: #0b1628;
+      border: 1px solid rgba(0, 255, 170, 0.25);
+      border-radius: 16px;
+      padding: 30px;
+    }
+
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .tool-tag {
+      padding: 8px 13px;
+      background: rgba(0, 255, 170, 0.1);
+      color: #00ffaa;
+      border-radius: 20px;
+      font-size: 14px;
+      border: 1px solid rgba(0, 255, 170, 0.25);
+    }
+
+    .cta-box {
+      text-align: center;
+      background: #0b1628;
+      border: 1px solid rgba(0, 255, 170, 0.25);
+      padding: 35px;
+      border-radius: 16px;
+    }
+
+    .cta-box h2 {
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      color: #b7c7d6;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+      margin: 5px;
+    }
+
+    .btn-primary {
+      background: #00ffaa;
+      color: #07111f;
+    }
+
+    .btn-primary:hover {
+      background: #00d890;
+    }
+
+    .btn-outline {
+      border: 1px solid #00ffaa;
+      color: #00ffaa;
+    }
+
+    .btn-outline:hover {
+      background: #00ffaa;
+      color: #07111f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      background: #050b14;
+      color: #8fa2b5;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .page-hero h1 {
+        font-size: 34px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
-<body class="sub_page">
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <nav class="navbar navbar-expand-lg custom_nav-container">
-        <div class="custom_menu-btn">
-          <button onclick="openNav()">
-            <span class="s-1"> </span>
-            <span class="s-2"> </span>
-            <span class="s-3"> </span>
-          </button>
-        </div>
-        <div id="myNav" class="overlay">
-          <div class="menu_btn-style ">
-            <button onclick="closeNav()">
-              <span class="s-1"> </span>
-              <span class="s-2"> </span>
-              <span class="s-3"> </span>
-            </button>
-          </div>
-          <div class="overlay-content">
-            <a class="" href="index.html">
-              Home
-            </a>
-            <a class="active" href="about.html">
-              About
-            </a>
-            <a class="" href="portfolio.html">
-              Portfolio
-            </a>
-            <a class="" href="team.html">
-              Team
-            </a>
-          </div>
-        </div>
-        <a class="navbar-brand" href="index.html">
-          <span>
-            Content Creator </span>
-        </a>
-        <a href="tel:+9779868858879" class="call_btn">
-          Call Us Now
-        </a>
-      </nav>
-    </header>
-    <!-- end header section -->
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Subodh<span style="color:#fff;">Awasthi</span></div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <span>About Me</span>
+    <h1>Who I Am</h1>
+    <p>
+      Final-year Computer Engineering student building practical cybersecurity skills
+      through SOC labs, certifications, tools, and GitHub projects.
+    </p>
   </div>
 
-  <!-- about section -->
+  <!-- About Main -->
+  <section>
+    <div class="container">
+      <div class="about-grid">
 
-  <section class="about_section ">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="img-box col-lg-8 col-md-7">
-          <img src="images\Online_education_illustration__boy_watching_educational_videos_vector_concept_generated.jpg" alt="" />
-        </div>
-        <div class="detail-box detail_box_common col-lg-4 col-md-5 text_center">
-          <div class="heading_container heading_center">
-            <h2>
-              About Us
-            </h2>
-          </div>
+        <div class="about-card">
+          <h2>My Cybersecurity Journey</h2>
+
           <p>
-            We deliver high-quality educational content that makes complex
-            topics engaging and accessible. Subodh Awasthi, our content creator,
-            and Ashish BK, our thumbnail specialist, work together to provide 
-            insightful videos with captivating visuals. Join us on this journey 
-            of knowledge and discovery!
+            I am <span class="highlight">Subodh Awasthi</span>, a final-year
+            Computer Engineering student with a strong interest in cybersecurity,
+            SOC analysis, and defensive security.
           </p>
-          <a href="https://www.youtube.com/@Subodh_Awasthi">
-            Read More
-          </a>
+
+          <p>
+            My learning focuses on threat detection, log analysis, network traffic
+            analysis, vulnerability scanning, incident response, and security monitoring.
+            I enjoy working with practical security tools and building labs that help
+            me understand how real-world cyber attacks are detected and investigated.
+          </p>
+
+          <p>
+            I believe cybersecurity is best learned by doing. That is why I create
+            hands-on projects, document my learning on GitHub, and continuously improve
+            my understanding of SOC workflows and security operations.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h2>Quick Profile</h2>
+
+          <ul class="info-list">
+            <li>
+              <i class="fa-solid fa-user"></i>
+              <strong>Name:</strong> Subodh Awasthi
+            </li>
+
+            <li>
+              <i class="fa-solid fa-graduation-cap"></i>
+              <strong>Education:</strong> Final Year Computer Engineering Student
+            </li>
+
+            <li>
+              <i class="fa-solid fa-shield-halved"></i>
+              <strong>Career Focus:</strong> SOC Analyst
+            </li>
+
+            <li>
+              <i class="fa-solid fa-certificate"></i>
+              <strong>Certification:</strong> Fortinet Certified Fundamentals in Cybersecurity
+            </li>
+
+            <li>
+              <i class="fa-brands fa-github"></i>
+              <strong>GitHub:</strong> Security labs and cybersecurity projects
+            </li>
+
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <strong>Location:</strong> Nepal
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Focus -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>What I Focus On</h2>
+        <p>Core areas I am developing as an aspiring SOC Analyst.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-card">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <h3>Log Analysis</h3>
+          <p>
+            Learning how to analyze security logs, identify suspicious events,
+            and understand alert patterns.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <i class="fa-solid fa-network-wired"></i>
+          <h3>Network Traffic Analysis</h3>
+          <p>
+            Using tools like Wireshark to inspect packets, understand protocols,
+            and detect abnormal network behavior.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <i class="fa-solid fa-bell"></i>
+          <h3>Intrusion Detection</h3>
+          <p>
+            Practicing IDS concepts using Snort to detect alerts and monitor
+            suspicious network activities.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <i class="fa-solid fa-bug-slash"></i>
+          <h3>Vulnerability Assessment</h3>
+          <p>
+            Using OpenVAS labs to understand vulnerability scanning, risk analysis,
+            and basic remediation concepts.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <i class="fa-solid fa-chart-simple"></i>
+          <h3>SIEM Basics</h3>
+          <p>
+            Exploring Splunk for log searching, event correlation, dashboards,
+            and security monitoring workflows.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <h3>Incident Response Basics</h3>
+          <p>
+            Understanding how security incidents are identified, analyzed,
+            prioritized, and documented.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section>
+    <div class="container">
+      <div class="tools-box">
+        <h2 style="color:#00ffaa;">Tools & Technologies</h2>
+        <p style="color:#b7c7d6;">
+          These are tools and technologies I use or am currently learning through my cybersecurity labs.
+        </p>
+
+        <div class="tools-list">
+          <span class="tool-tag">Splunk</span>
+          <span class="tool-tag">Wireshark</span>
+          <span class="tool-tag">Snort</span>
+          <span class="tool-tag">OpenVAS</span>
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">Linux</span>
+          <span class="tool-tag">GitHub</span>
+          <span class="tool-tag">Nmap</span>
+          <span class="tool-tag">VirtualBox / VMware</span>
+          <span class="tool-tag">SIEM Fundamentals</span>
+          <span class="tool-tag">Network Security</span>
+          <span class="tool-tag">Fortinet Fundamentals</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- end about section -->
+  <!-- Goal -->
+  <section>
+    <div class="container">
+      <div class="goal-card">
+        <h2>My Goal</h2>
+        <p>
+          My goal is to become a skilled SOC Analyst who can monitor security alerts,
+          analyze logs, investigate suspicious activities, and support incident response
+          processes in a professional cybersecurity environment.
+        </p>
 
-  <!-- contact section -->
-
-  <section class="contact_section ">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-8 map_container">
-          <div class="map">
-            <div id="googleMap"></div>
-          </div>
-        </div>
-        <div class="col-md-4 detail-box detail_box_common">
-          <div>
-            <div class="heading_container">
-              <h2>
-                Get In Touch
-              </h2>
-            </div>
-            <div class="info_contact">
-              <div class="contact_link_box">
-                <a href="">
-                  <i class="fa fa-map-marker" aria-hidden="true"></i>
-                  <span>
-                    Location
-                  </span>
-                </a>
-                <a href="tel:+9779868858879">
-                  <i class="fa fa-phone" aria-hidden="true"></i>
-                  <span>
-                    Call +9779868858879
-                  </span>
-                </a>
-                <a href="maito:subodhawasthi040@gmail.com">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
-                  <span>
-                    subodhawasthi040@gmail.com
-                  </span>
-                </a>
-              </div>
-              <div class="info_social">
-                <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="https://www.instagram.com/sub0dh_awasthi/" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p>
+          I am currently building a strong foundation through Fortinet certification,
+          hands-on SOC labs, GitHub documentation, and continuous learning in defensive
+          cybersecurity.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- end contact section -->
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-box">
+        <h2>Want to See My Practical Work?</h2>
+        <p>
+          Explore my SOC labs, cybersecurity projects, and hands-on GitHub repositories.
+        </p>
 
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xl-6">
-          <p>
-            &copy; <span id="displayYear"></span> All Rights Reserved. Design
-            by
-            <a href="https://www.instagram.com/sub0dh_awasthi/">Subodh awasthi</a>
-          </p>
-        </div>
-        <div class="col-xl-6">
-          <div class="link_box">
-            <a class="" href="index.html">
-              Home
-            </a>
-            <a class="" href="about.html">
-              About
-            </a>
-            <a class="" href="portfolio.html">
-              Portfolio
-            </a>
-            <a class="" href="team.html">
-              Team
-            </a>
-          </div>
-        </div>
+        <a href="portfolio.html" class="btn btn-primary">View My Projects</a>
+        <a href="contact.html" class="btn btn-outline">Contact Me</a>
       </div>
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Subodh Awasthi. SOC Analyst Portfolio.</p>
   </footer>
-  <!-- footer section -->
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
 
 </body>
-
 </html>
