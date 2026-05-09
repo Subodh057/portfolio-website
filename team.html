@@ -1,294 +1,304 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Content Creator</title>
+  <title>Certifications | Subodh Awasthi</title>
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <!-- fonts awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #07111f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      width: 100%;
+      background: #0b1628;
+      border-bottom: 1px solid rgba(0, 255, 170, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffaa;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #d9e6f2;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #00ffaa;
+    }
+
+    .page-hero {
+      padding: 90px 20px 60px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(7, 17, 31, 0.94), rgba(7, 17, 31, 0.98)),
+        url("images/cyber-bg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .page-hero span {
+      display: inline-block;
+      padding: 8px 14px;
+      background: rgba(0, 255, 170, 0.1);
+      border: 1px solid rgba(0, 255, 170, 0.4);
+      color: #00ffaa;
+      border-radius: 30px;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .page-hero h1 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    .page-hero p {
+      color: #b7c7d6;
+      max-width: 760px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .cert-card {
+      background: #0b1628;
+      border: 1px solid rgba(0, 255, 170, 0.25);
+      border-radius: 16px;
+      padding: 35px;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .cert-image-box {
+      background: #07111f;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .cert-image-box img {
+      width: 100%;
+      max-width: 460px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .cert-info h2 {
+      color: #00ffaa;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .cert-info p {
+      color: #c7d6e5;
+      margin-bottom: 13px;
+      font-size: 16px;
+    }
+
+    .cert-info strong {
+      color: #ffffff;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: 6px 5px 0 0;
+      padding: 7px 12px;
+      background: rgba(0, 255, 170, 0.1);
+      color: #00ffaa;
+      border-radius: 20px;
+      font-size: 13px;
+      border: 1px solid rgba(0, 255, 170, 0.25);
+    }
+
+    .note-box {
+      margin-top: 35px;
+      background: rgba(0, 255, 170, 0.08);
+      border: 1px solid rgba(0, 255, 170, 0.25);
+      border-radius: 14px;
+      padding: 25px;
+      color: #c7d6e5;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+      margin-top: 18px;
+    }
+
+    .btn-primary {
+      background: #00ffaa;
+      color: #07111f;
+    }
+
+    .btn-primary:hover {
+      background: #00d890;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      background: #050b14;
+      color: #8fa2b5;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .page-hero h1 {
+        font-size: 34px;
+      }
+
+      .cert-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
-<body class="sub_page">
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <nav class="navbar navbar-expand-lg custom_nav-container">
-        <div class="custom_menu-btn">
-          <button onclick="openNav()">
-            <span class="s-1"> </span>
-            <span class="s-2"> </span>
-            <span class="s-3"> </span>
-          </button>
-        </div>
-        <div id="myNav" class="overlay">
-          <div class="menu_btn-style ">
-            <button onclick="closeNav()">
-              <span class="s-1"> </span>
-              <span class="s-2"> </span>
-              <span class="s-3"> </span>
-            </button>
-          </div>
-          <div class="overlay-content">
-            <a class="" href="index.html">
-              Home
-            </a>
-            <a class="" href="about.html">
-              About
-            </a>
-            <a class="" href="portfolio.html">
-              Portfolio
-            </a>
-            <a class="active" href="team.html">
-              Team
-            </a>
-          </div>
-        </div>
-        <a class="navbar-brand" href="index.html">
-          <span>
-            Content Creator
-          </span>
-        </a>
-        <a href="tel:+9779868858879" class="call_btn">
-          Call Us Now
-        </a>
-      </nav>
-    </header>
-    <!-- end header section -->
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Subodh<span style="color:#fff;">Awasthi</span></div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="team.html" class="active">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <span>Certifications & Learning</span>
+    <h1>My Certifications</h1>
+    <p>
+      Certifications that support my cybersecurity foundation and SOC Analyst career path.
+    </p>
   </div>
 
+  <section>
+    <div class="container">
 
-  <!-- team section -->
-  <section class="team_section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-4 col-md-5 detail-box detail_box_common text_center">
-          <div class="heading_container heading_center">
-            <h2>
-              Our Creative Team
-            </h2>
-          </div>
+      <div class="cert-card">
+
+        <div class="cert-image-box">
+          <img
+            src="images/fortinet-certificate.jpg"
+            alt="Fortinet Certified Fundamentals in Cybersecurity Certificate"
+          />
+        </div>
+
+        <div class="cert-info">
+          <h2>Fortinet Certified Fundamentals in Cybersecurity</h2>
+
+          <p><strong>Issued by:</strong> Fortinet Training Institute</p>
+          <p><strong>Achievement Date:</strong> May 9, 2026</p>
+          <p><strong>Valid Until:</strong> May 9, 2028</p>
+
           <p>
-            Welcome to our Creative Team section! Subodh Awasthi,
-            our content creator, makes complex topics engaging and 
-            accessible, while Ashish BK, our thumbnail specialist, 
-            ensures our visuals are both appealing and accurate. 
-            Together, they deliver high-quality, insightful, and 
-            visually engaging educational content. Thank you for 
-            joining us on this journey of knowledge and discovery!
+            This certification demonstrates my foundational knowledge of cybersecurity
+            concepts, threat awareness, security principles, and the basics required
+            for cybersecurity and SOC-related roles.
           </p>
-        </div>
-        <div class="col-lg-8 col-md-7 team_container text_center">
-          <div class="row">
-            <div class="col-sm-6 mx-auto">
-              <div class="team_box">
-                <div class="img-box">
-                  <img src="images\IMG_2465.jpg" alt="">
-                </div>
-                <div class="detail-box ">
-                  <h5>
-                    Ashish BK
-                  </h5>
-                  <div class="social-box">
-                    <a href="">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.instagram.com/ashishbk932/">
-                      
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 mx-auto">
-              <div class="team_box">
-                <div class="img-box">
-                  <img src="images\IMG_2472.JPG" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    subodh awasthi
-                  </h5>
-                  <div class="social-box">
-                    <a href="">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.instagram.com/sub0dh_awasthi/">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 mx-auto">
-              <div class="team_box">
-                <div class="img-box">
-                  
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    
-                  </h5>
-                  <div class="social-box">
-                    <a href="">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end team section -->
 
-  <!-- contact section -->
+          <span class="tag">Cybersecurity Fundamentals</span>
+          <span class="tag">Threat Awareness</span>
+          <span class="tag">Security Principles</span>
+          <span class="tag">Fortinet</span>
 
-  <section class="contact_section ">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-8 map_container">
-          <div class="map">
-            <div id="googleMap"></div>
-          </div>
+          <br />
+
+          <a href="portfolio.html" class="btn btn-primary">View My Projects</a>
         </div>
-        <div class="col-md-4 detail-box detail_box_common">
-          <div>
-            <div class="heading_container">
-              <h2>
-                Get In Touch
-              </h2>
-            </div>
-            <div class="info_contact">
-              <div class="contact_link_box">
-                <a href="https://www.instagram.com/sub0dh_awasthi/">
-                  <i class="fa fa-map-marker" aria-hidden="true"></i>
-                  <span>
-                    Location
-                  </span>
-                </a>
-                <a href="tel:+9779868858879">
-                  <i class="fa fa-phone" aria-hidden="true"></i>
-                  <span>
-                    Call +9779868858879
-                  </span>
-                </a>
-                <a href="maito:subodhawasthi040@gmail.com">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
-                  <span>
-                    subodhawasthi040@gmail.com
-                  </span>
-                </a>
-              </div>
-              <div class="info_social">
-                <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.instagram.com/sub0dh_awasthi/">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
+
+      <div class="note-box">
+        <strong>Learning Focus:</strong>
+        Along with certifications, I focus on practical SOC labs using Splunk,
+        Wireshark, Snort, OpenVAS, Python, and Linux to build real hands-on
+        cybersecurity skills.
+      </div>
+
     </div>
   </section>
 
-  <!-- end contact section -->
-
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xl-6">
-          <p>
-            &copy; <span id="displayYear"></span> All Rights Reserved. Design
-            by
-            <a href="https://www.instagram.com/sub0dh_awasthi/">Subodh Awasthi</a>
-          </p>
-        </div>
-        <div class="col-xl-6">
-          <div class="link_box">
-            <a class="" href="index.html">
-              Home
-            </a>
-            <a class="" href="about.html">
-              About
-            </a>
-            <a class="" href="portfolio.html">
-              Portfolio
-            </a>
-            <a class="" href="team.html">
-              Team
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <footer>
+    <p>© 2026 Subodh Awasthi. SOC Analyst Portfolio.</p>
   </footer>
-  <!-- footer section -->
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
 
 </body>
-
 </html>
